@@ -20,12 +20,6 @@ Pythonをベースとしており、`Python`/`Ren'Py Script`にトランスパ�
 
 Ren'Pyでのゲーム制作がより簡単・高度になるようなutilityの開発も行っております。
 
-例として、`builder`というものを開発しており、  
-これは、macOSでRen'Pyから出力した`Xcode Project`から`.ipa`をコマンド一つで生成するものです。
-
-現在では、`builder`を改良した`distributor`を開発しており、  
-WindowsまたはLinuxで、コマンド一つでPC用からAndroid用（`.apk`）、iOS用（`.ipa`）やWeb用アプリを生成できるようなものを開発しております。
-
 # LICENSE
 
 レポジトリライセンスは`MIT`になるように調整していますが、その他のライセンスとの噛み合いによっては`MIT`以外になる場合もあります。
