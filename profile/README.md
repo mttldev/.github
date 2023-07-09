@@ -1,25 +1,50 @@
 # MTTLDev
 
-自作ゲームの開発を行っております。
+Welcome to MTTLDev!
 
-# Working
+# 組織構成
 
-## 自作ゲーム
+```mermaid
+graph TD
+    org["MTTL Dev"] --> Programmer
+    org --> Designer
+    org --> Writer
+```
 
-自作言語である`MTScript`を用いた自作ゲームを開発しております。  
-日の目を浴びるのは一体いつになるのか...
+# プログラムの構成
+
+```mermaid
+graph LR
+    js("JavaScript") --> mtsc["MTScript"]
+    py("Python") --> mtsc
+    mtsc --> rpy["Ren'Py"]
+    rpy --> app["Novel Game"]
+    js --> we["Web Extension"]
+    app --> we
+    we --> wp["Web Platform"]
+    app --> mw["Mobile Wrapper"]
+    mw --> mp["Mobile Platform"]
+    app --> ds["Distributor"]
+    py --> ds
+    ds --> cp["Computer Platform"]
+```
+
+# よく使われる言語
+
+## Python
+Ren'Pyのサポート言語のため使用。  
+MTScriptのコンパイラ作成にも使用。
+
+## JavaScript
+クライアントサイドとしてのJavaScriptを使用。  
+MTScriptのコンパイラや、Web Extensionの作成に使用。
 
 ## MTScript
+Ren'Pyでのストーリー作成をより容易にするために開発されたトランスパイル型の独自言語。  
+なお、言語の定義は曖昧なものとする。
 
-`MTScript`というトランスパイル型の言語を開発しております。  
-Pythonをベースとしており、`Python`/`Ren'Py Script`にトランスパイルされて実行されます。
+## Ren'Py Script
+ゲーム内のデザインやゲームのストーリー外のプログラムを作成する為に使用。
 
-コンパイラにはPython及びJavaScriptのバージョンを作っており、JavaScriptバージョンのコンパイラはブラウザでの実行を目指しています。
-
-## その他Utility
-
-Ren'Pyでのゲーム制作がより簡単・高度になるようなutilityの開発も行っております。
-
-# LICENSE
-
-レポジトリライセンスは`MIT`になるように調整していますが、その他のライセンスとの噛み合いによっては`MIT`以外になる場合もあります。
+## Go
+実行のし易さを活かし、セットアップ用プログラムの開発などに使用。
