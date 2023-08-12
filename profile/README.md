@@ -15,11 +15,11 @@ graph TD
 
 ```mermaid
 graph LR
-    js("JavaScript") --> mtsc["MTScript"]
-    py("Python") --> mtsc
+    ts("TypeScript") --> mtsc["MTScript"]
     mtsc --> rpy["Ren'Py"]
+    py("Python") --> rpy
     rpy --> app["Novel Game"]
-    js --> we["Web Extension"]
+    js("JavaScript") --> we["Web Extension"]
     app --> we
     we --> wp["Web Platform"]
     app --> mw["Mobile Wrapper"]
@@ -33,11 +33,13 @@ graph LR
 
 ## Python
 Ren'Pyのサポート言語のため使用。  
-MTScriptのコンパイラ作成にも使用。
 
 ## JavaScript
 クライアントサイドとしてのJavaScriptを使用。  
-MTScriptのコンパイラや、Web Extensionの作成に使用。
+Web Extensionの作成に使用。
+
+## TypeScript
+MTScriptのコンパイラ作成に使用。
 
 ## MTScript
 Ren'Pyでのストーリー作成をより容易にするために開発されたトランスパイル型の独自言語。  
