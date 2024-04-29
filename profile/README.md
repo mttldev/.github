@@ -2,51 +2,15 @@
 
 Welcome to MTTLDev!
 
-# 組織構成
+# 開発
+## [`image-early-loader`](https://github.com/mttldev/image-early-loader)
+Ren'Py製ゲームをWeb版で実行した際、今まで読み込まれたことのない画像（キャッシュに入っていない画像）が、モザイクがかかっているように表示されてしまう仕様を修正するため、事前に画像を読み込み、キャッシュに入れることで改善するためのスクリプトです。
 
-```mermaid
-graph TD
-    org["MTTL Dev"] --> Programmer
-    org --> Designer
-    org --> Writer
-```
+## [`reed`](https://github.com/mttldev/reed) / [`renpy-live-viewer`](https://github.com/mttldev/renpy-live-viewer)
+`reed`は、Ren'Py製ゲーム内に埋め込むことで実行できるWebSocketサーバーで、WebSocketクライアントからの操作でRen'Pyのゲームのデバッグを簡単に行えるようにするものです。
 
-# プログラムの構成
+`renpy-live-viewer`は、`reed`に接続することで、VSCodeでRen'Pyゲームのプロジェクトを開いている際に、`.rpy`ファイルの中でカーソルを移動させるだけでそのカーソルの位置にゲームがジャンプする、疑似リアルタイムプレビュー機能を提供します。
 
-```mermaid
-graph LR
-    ts("TypeScript") --> mtsc["MTScript"]
-    mtsc --> rpy["Ren'Py"]
-    py("Python") --> rpy
-    rpy --> app["Novel Game"]
-    js("JavaScript") --> we["Web Extension"]
-    app --> we
-    we --> wp["Web Platform"]
-    app --> mw["Mobile Wrapper"]
-    mw --> mp["Mobile Platform"]
-    app --> ds["Distributor"]
-    py --> ds
-    ds --> cp["Computer Platform"]
-```
-
-# よく使われる言語
-
-## Python
-Ren'Pyのサポート言語のため使用。  
-
-## JavaScript
-クライアントサイドとしてのJavaScriptを使用。  
-Web Extensionの作成に使用。
-
-## TypeScript
-MTScriptのコンパイラ作成に使用。
-
-## MTScript
-Ren'Pyでのストーリー作成をより容易にするために開発されたトランスパイル型の独自言語。  
-なお、言語の定義は曖昧なものとする。
-
-## Ren'Py Script
-ゲーム内のデザインやゲームのストーリー外のプログラムを作成する為に使用。
-
-## Go
-実行のし易さを活かし、セットアップ用プログラムの開発などに使用。
+## `MOON-SERVICE`
+`API`(Backend)と`Webページ`(Frontend)を1つのプログラムで動作させるネットワークサーバーです。  
+Pythonの`Sanic`を用いて開発されており、開発中のゲームではそれを活用しています。
