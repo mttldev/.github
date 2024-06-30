@@ -11,6 +11,6 @@ Ren'Py製ゲームをWeb版で実行した際、今まで読み込まれたこ�
 
 `renpy-live-viewer`は、`reed`に接続することで、VSCodeでRen'Pyゲームのプロジェクトを開いている際に、`.rpy`ファイルの中でカーソルを移動させるだけでそのカーソルの位置にゲームがジャンプする、疑似リアルタイムプレビュー機能を提供します。
 
-## `MOON-SERVICE`
+## [`MOON-SERVICE`](https://github.com/mttldev/moon-backend)
 `API`(Backend)と`Webページ`(Frontend)を1つのプログラムで動作させるネットワークサーバーです。  
-Pythonの`Sanic`を用いて開発されており、開発中のゲームではそれを活用しています。
+Pythonの`Sanic`を用いて開発されています。
